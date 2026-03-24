@@ -186,10 +186,11 @@ private:
         {
             throw invalid_argument("Password length can not fewer than 8!");
         }
-        if (hasDigit(pwd))
+        if (hasDigit(pwd) == false)
         {
-           throw invalid_argument("Password can not be empty!");
+            throw invalid_argument("Password must includes atleast an integer!");
         }
+       
     }
 
 public:
