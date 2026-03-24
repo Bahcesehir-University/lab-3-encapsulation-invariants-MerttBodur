@@ -84,10 +84,15 @@ public:
     // Throw std::invalid_argument if owner is empty or balance < 0
     BankAccount(const string& owner, double initialBalance) {
         // TODO: Validate and set members
-        if (owner.empty() && initialBalance < 0)
+        if (owner.empty()) 
         {
-            throw invalid_argument("owner can not be empty and balance can not be smaller than zero!");
+            throw invalid_argument("Owner can not be empty!");
         }
+        if (initialBalance < 0)
+        {
+            throw invalid_argument("Initial balance can not fewer than 0!");
+        }
+        
         owner_ = owner;
         balance_ = initialBalance;
     }
@@ -213,7 +218,7 @@ public:
     // Check if a given string matches the stored password.
     bool matches(const string& attempt) const {
         // TODO: Implement
-        return password_ == attempt;
+        return attempt = password_;
     }
 
     // Return the length of the password (safe to expose)
