@@ -218,7 +218,7 @@ public:
     // Check if a given string matches the stored password.
     bool matches(const string& attempt) const {
         // TODO: Implement
-        return attempt == password_;
+        return attempt == password_ ;
     }
 
     // Return the length of the password (safe to expose)
